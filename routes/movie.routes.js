@@ -47,6 +47,9 @@ router.get('/movie/:id', async (req, res) => {
   }
 })
 
+// PUT => substituição (destrutiva)
+// PATCH => atualização (não-destrutiva)
+
 router.patch('/movie/:id', async (req, res) => {
   try {
     const result = await MovieModel.findOneAndUpdate(
